@@ -35,3 +35,6 @@ website/i18n/*
 
 tsconfig.vitest-temp.json
 
+
+.rollup.cache
+tsconfig.tsbuildinfo

@@ -2,6 +2,10 @@
   "name": "use-selector-context",
   "version": "0.1.0",
   "description": "React useSelectorContext hook, support custom isEqual function",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "frontend",
     "react",
@@ -14,8 +18,16 @@
   "repository": "https://github.com/starunaway/useSelectorContext",
   "bugs": "https://github.com/starunaway/useSelectorContext/issues",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "author": "starunaway (https://github.com/starunaway)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.3"
+  }
 }
