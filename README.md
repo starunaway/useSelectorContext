@@ -1,5 +1,6 @@
 # useSelectorContext
 
+[![CI](https://img.shields.io/github/actions/workflow/status/starunaway/useSelectorContext/test.yml?branch=main)](https://github.com/starunaway/useSelectorContext/actions?query=workflow%3ACI)
 [![npm](https://img.shields.io/npm/v/use-selector-context)](https://www.npmjs.com/package/use-selector-context)
 [![size](https://img.shields.io/bundlephobia/minzip/use-selector-context)](https://bundlephobia.com/result?p=use-selector-context)
 
