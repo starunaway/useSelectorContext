@@ -1,6 +1,6 @@
 {
   "name": "use-selector-context",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React useSelectorContext hook, support custom isEqual function",
   "type": "module",
   "main": "dist/index.cjs.js",
