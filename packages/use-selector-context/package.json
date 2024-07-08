@@ -19,7 +19,9 @@
   "bugs": "https://github.com/starunaway/useSelectorContext/issues",
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "cp ../../README.md ."
+    "prepublishOnly": "cp ../../README.md .",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "author": "starunaway (https://github.com/starunaway)",
   "license": "MIT",
@@ -28,7 +30,11 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/react": "^16.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "jsdom": "^24.1.0",
     "rollup": "^4.18.0",
-    "tslib": "^2.6.3"
+    "tslib": "^2.6.3",
+    "vitest": "^1.6.0"
   }
 }

@@ -4,7 +4,11 @@
     "rootDir": "src",
     "outDir": "lib",
     "composite": true,
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "use-selector-context": ["./src/index.ts"]
+    }
   },
+
   "include": ["src"]
 }

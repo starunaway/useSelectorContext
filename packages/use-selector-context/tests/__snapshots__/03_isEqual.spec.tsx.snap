@@ -1,0 +1,95 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`03_isEqual > counter 1`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      0
+    </span>
+    <button
+      type="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounterA"
+    >
+      1
+    </span>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounterB"
+    >
+      1
+    </span>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounterC"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`03_isEqual > counter 2`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      1
+    </span>
+    <button
+      type="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounterA"
+    >
+      3
+    </span>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounterB"
+    >
+      1
+    </span>
+  </div>
+  <div>
+    <span>
+      1
+    </span>
+    <span
+      data-testid="memocounterC"
+    >
+      3
+    </span>
+  </div>
+</div>
+`;

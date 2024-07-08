@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`02_re_render > counter 1`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      0
+    </span>
+    <button
+      type="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="counter2"
+    >
+      1
+    </span>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounter2"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`02_re_render > counter 2`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      1
+    </span>
+    <button
+      type="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="counter2"
+    >
+      3
+    </span>
+  </div>
+  <div>
+    <span>
+      0
+    </span>
+    <span
+      data-testid="memocounter2"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
