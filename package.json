@@ -9,11 +9,16 @@
     "useContext",
     "useSelectorContext"
   ],
+  "engines": {
+    "pnpm": ">=8"
+  },
   "homepage": "https://github.com/starunaway/useSelectorContext",
   "repository": "https://github.com/starunaway/useSelectorContext",
   "bugs": "https://github.com/starunaway/useSelectorContext/issues",
   "scripts": {
-    "example": "pnpm --filter example run dev"
+    "example": "pnpm --filter example run dev",
+    "preinstall": "npx only-allow pnpm",
+    "test": "pnpm --filter=./packages/* run test"
   },
   "author": "starunaway (https://github.com/starunaway)",
   "license": "MIT",
