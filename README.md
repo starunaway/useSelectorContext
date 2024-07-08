@@ -222,4 +222,4 @@ pnpm run example
 and open <http://localhost:5173> in your browser.
 
 You can also try them directly:
-[Online Example](https://stackblitz.com/~/github.com/starunaway/useSelectorContext)
+[Online Example](https://stackblitz.com/github/starunaway/useSelectorContext)
