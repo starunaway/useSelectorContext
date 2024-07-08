@@ -1,5 +1,8 @@
 # useSelectorContext
 
+[![npm](https://img.shields.io/npm/v/use-selector-context)](https://www.npmjs.com/package/use-selector-context)
+[![size](https://img.shields.io/bundlephobia/minzip/use-selector-context)](https://bundlephobia.com/result?p=use-selector-context)
+
 React useSelectorContext hook, support custom isEqual function
 
 ## Introduction
