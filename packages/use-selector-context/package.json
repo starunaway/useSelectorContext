@@ -1,0 +1,21 @@
+{
+  "name": "use-selector-context",
+  "version": "0.1.0",
+  "description": "React useSelectorContext hook, support custom isEqual function",
+  "keywords": [
+    "frontend",
+    "react",
+    "react context",
+    "react hooks",
+    "useContext",
+    "useSelectorContext"
+  ],
+  "homepage": "https://github.com/starunaway/useSelectorContext",
+  "repository": "https://github.com/starunaway/useSelectorContext",
+  "bugs": "https://github.com/starunaway/useSelectorContext/issues",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "starunaway (https://github.com/starunaway)",
+  "license": "MIT"
+}
