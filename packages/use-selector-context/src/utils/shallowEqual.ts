@@ -1,3 +1,7 @@
+/**
+ * https://github.com/reduxjs/react-redux/blob/master/src/utils/shallowEqual.ts
+ */
+
 function is(x: unknown, y: unknown) {
   if (x === y) {
     return x !== 0 || y !== 0 || 1 / x === 1 / y;

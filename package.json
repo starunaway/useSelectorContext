@@ -13,7 +13,7 @@
   "repository": "https://github.com/starunaway/useSelectorContext",
   "bugs": "https://github.com/starunaway/useSelectorContext/issues",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example": "pnpm --filter example run dev"
   },
   "author": "starunaway (https://github.com/starunaway)",
   "license": "MIT",
