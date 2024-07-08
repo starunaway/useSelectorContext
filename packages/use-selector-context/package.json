@@ -18,7 +18,8 @@
   "repository": "https://github.com/starunaway/useSelectorContext",
   "bugs": "https://github.com/starunaway/useSelectorContext/issues",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "cp ../../README.md ."
   },
   "author": "starunaway (https://github.com/starunaway)",
   "license": "MIT",
