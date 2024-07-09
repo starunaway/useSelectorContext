@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`04_withContext > counter 1`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      0
+    </span>
+    <button
+      data-testid="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span
+      data-testid="snapShotA"
+    />
+    <button
+      data-testid="btnA"
+    >
+      getSnapshot
+    </button>
+    <span
+      data-testid="memocounterA"
+    >
+      1
+    </span>
+  </div>
+  <div>
+    <span
+      data-testid="snapShotB"
+    />
+    <button
+      data-testid="btnB"
+    >
+      getSnapshot
+    </button>
+    <span
+      data-testid="memocounterB"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`04_withContext > counter 2`] = `
+<div>
+  <div>
+    <span
+      data-testid="counter1"
+    >
+      1
+    </span>
+    <button
+      data-testid="button"
+    >
+      +1
+    </button>
+  </div>
+  <div>
+    <span
+      data-testid="snapShotA"
+    >
+      1
+    </span>
+    <button
+      data-testid="btnA"
+    >
+      getSnapshot
+    </button>
+    <span
+      data-testid="memocounterA"
+    >
+      3
+    </span>
+  </div>
+  <div>
+    <span
+      data-testid="snapShotB"
+    >
+      1
+    </span>
+    <button
+      data-testid="btnB"
+    >
+      getSnapshot
+    </button>
+    <span
+      data-testid="memocounterB"
+    >
+      3
+    </span>
+  </div>
+</div>
+`;

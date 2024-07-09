@@ -1,5 +1,5 @@
 import React, { memo, useMemo, useState } from 'react';
-import { useContext, createContext, shallowEqual } from 'use-selector-context';
+import { useContext, createContext, shallowEqual, useGetSnapshot } from 'use-selector-context';
 
 const context = createContext<{
   v1: number;
@@ -73,7 +73,37 @@ const Child5 = memo(() => {
   console.log('child5 render');
   const { v3 } = useAppContext((v) => ({ v3: v.v3 }));
 
-  return <div>child5,v3.length:{v3.length},没有shallowEqual</div>;
+  return <div>child5,v3.length:{v3.length},without shallowEqual</div>;
+});
+
+const useGetAppSnapshot = useGetSnapshot.withContext(context);
+
+const Child6 = memo(() => {
+  console.log('child6 render');
+  const getSnapshot = useGetAppSnapshot();
+  const [snapShot, setSnapShot] = useState<ReturnType<typeof getSnapshot> | null>(null);
+
+  return (
+    <div>
+      <span>getSnapshot:{JSON.stringify(snapShot, null, 2)}</span>
+      <button onClick={() => setSnapShot(getSnapshot())}>getSnapshot</button>
+    </div>
+  );
+});
+
+const Child7 = memo(() => {
+  console.log('child7 render');
+
+  const getSnapshot = useGetSnapshot(context);
+
+  const [snapShot, setSnapShot] = useState<ReturnType<typeof getSnapshot> | null>(null);
+
+  return (
+    <div>
+      <span>getSnapshot:{JSON.stringify(snapShot, null, 2)}</span>
+      <button onClick={() => setSnapShot(getSnapshot())}>getSnapshot</button>
+    </div>
+  );
 });
 
 function App() {
@@ -93,6 +123,8 @@ function App() {
       <Child3 />
       <Child4 />
       <Child5 />
+      <Child6 />
+      <Child7 />
     </context.Provider>
   );
 }

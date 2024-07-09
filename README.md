@@ -153,34 +153,34 @@ import { createContext } from 'use-selector-context';
 const AppContext = createContext({ a: '', b: '' });
 ```
 
-### useSelectorContext
+### useContext
 
 This hook returns context selected value by selector.
 
-`useSelectorContext` only accepts contexts created by `createContext`. It initiates a re-render only when the selected value undergoes a referential change.
+`useContext` only accepts contexts created by `createContext`. It initiates a re-render only when the selected value undergoes a referential change.
 
 - By default, `selector` uses the function `(value) => value` to retrieve the value. You have the option to use destructuring to extract data.
 - By default, `isEqual` uses `Object.is` for comparison. However, you have the flexibility to use `shallowEqual`(import ) or your own custom `isEqual` function to determine when the selected value has changed.
 
 #### Parameters
 
-- `context` **Context\<Value>**&#x20;
+- `context` **ZContext\<Value>**&#x20;
 - `selector?` **function (value: Value): Selected**&#x20;
 - `isEqual?` **function (a: Selected,b: Selected): boolean**&#x20;
 
 #### Examples
 
 ```javascript
-import { useSelectorContext, shallowEqual } from 'use-selector-context';
+import { useContext, shallowEqual } from 'use-selector-context';
 
-const a = useSelectorContext(AppContext, (state) => state.a);
+const a = useContext(AppContext, (state) => state.a);
 // or
-const b = useSelectorContext(AppContext, (state) => {
+const b = useContext(AppContext, (state) => {
   b: state.a;
 });
 
 // or
-const c = useSelectorContext(
+const c = useContext(
   AppContext,
   (state) => {
     c: state.a;
@@ -189,20 +189,20 @@ const c = useSelectorContext(
 );
 ```
 
-### useSelectorContext.withContext
+### useContext.withContext
 
-Similar to [React Redux useSelector](https://github.com/reduxjs/react-redux/blob/master/src/hooks/useSelector.ts#L263), you can use useSelectorContext.withContext to specify the context type and to pass in the default parameters for the context.
+Similar to [React Redux useSelector](https://github.com/reduxjs/react-redux/blob/master/src/hooks/useSelector.ts#L263), you can use `useContext.withContext` to specify the context type and to pass in the default parameters for the context.
 
 #### Parameters
 
-- `context` **Context\<Value>**&#x20;
+- `context` **ZContext\<Value>**&#x20;
 
 #### Examples
 
 ```javascript
-import { useSelectorContext, shallowEqual } from 'use-selector-context';
+import { useContext, shallowEqual } from 'use-selector-context';
 
-const useAppContext = useSelectorContext.withContext(AppContext);
+const useAppContext = useContext.withContext(AppContext);
 // or
 const a = useAppContext((state) => {
   b: state.a;
@@ -212,6 +212,41 @@ const a = useAppContext((state) => {
 const c = useAppContext((state) => {
   c: state.a;
 }, shallowEqual);
+```
+
+### useGetSnapshot
+
+It is used to get the current snapshot of the provided context.
+
+#### Parameters
+
+- `defaultValue` **ZContext<Value>**&#x20;
+
+#### Examples
+
+```javascript
+import { useGetSnapshot } from 'use-selector-context';
+//  in Component
+const getAppContext = useGetSnapshot(AppContext);
+```
+
+### useGetSnapshot.withContext
+
+You can use `useGetSnapshot.withContext` to specify the context type and to pass in the default parameters for the context.
+
+#### Parameters
+
+- `defaultValue` **ZContext<Value>**&#x20;
+
+#### Examples
+
+```javascript
+import { useGetSnapshot } from 'use-selector-context';
+
+const useGetAppSnapshot = useGetSnapshot.withContext(context);
+
+//  in Component
+const getAppContext = useGetAppSnapshot();
 ```
 
 ## Examples
