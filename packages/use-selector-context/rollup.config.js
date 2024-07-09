@@ -9,15 +9,18 @@ export default {
     {
       file: 'dist/index.cjs.js',
       format: 'cjs',
+      sourcemap: true,
     },
     {
       file: 'dist/index.esm.js',
       format: 'es',
+      sourcemap: true,
     },
     {
       file: 'dist/index.umd.js',
       format: 'umd',
       name: 'useSelectorContext',
+      sourcemap: true,
       globals: {
         react: 'React',
       },
