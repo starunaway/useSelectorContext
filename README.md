@@ -34,7 +34,7 @@ pnpm add use-selector-context
 To make it work like original React context, it uses
 [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore) without any libraries.
 
-Inspiration was drawn from [an example](https://github.com/dai-shi/use-selector-context/issues/109#issuecomment-1785147682).
+Inspiration was drawn from [an example](https://github.com/dai-shi/use-context-selector/issues/109#issuecomment-1785147682).
 
 ## Usage
 
