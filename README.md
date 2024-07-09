@@ -4,7 +4,8 @@
 [![npm](https://img.shields.io/npm/v/use-selector-context)](https://www.npmjs.com/package/use-selector-context)
 [![size](https://img.shields.io/bundlephobia/minzip/use-selector-context)](https://bundlephobia.com/result?p=use-selector-context)
 
-React useSelectorContext hook, support custom isEqual function
+React useSelectorContext hook, support custom isEqual function.
+This hook only depends on React and doesn't require any other external library. This makes it a lightweight and efficient option for managing and using state in your React applications.
 
 ## Introduction
 
@@ -18,7 +19,7 @@ The `useSelectorContext` supports custom `selector` and `isEqual` functions, pro
 
 ## Install
 
-This package requires react > 18.
+This package requires react >= 18.
 
 ```bash
 npm install use-selector-context
