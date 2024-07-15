@@ -8,11 +8,14 @@ export interface UseGetSnapshot<Value = unknown> {
 }
 
 function createUseGetSnapshot() {
-  const useGetSnapshot: UseGetSnapshot = <Value = unknown, Selected = Value>(
-    context: ZContext<Value>
-  ) => {
+  const useGetSnapshot: UseGetSnapshot = <Value = unknown>(context: ZContext<Value>) => {
     const { getSnapshot } = React.useContext(context as unknown as Context<ZContextValue<Value>>);
 
+    if (typeof process === 'object' && process.env.NODE_ENV !== 'production') {
+      if (!getSnapshot) {
+        throw new Error('useGetSnapshot requires special context');
+      }
+    }
     return getSnapshot;
   };
 

@@ -35,6 +35,12 @@ function createUseContextHook() {
       context as unknown as Context<ZContextValue<Value>>
     );
 
+    if (typeof process === 'object' && process.env.NODE_ENV !== 'production') {
+      if (!getSnapshot || !subscribe) {
+        throw new Error('useSelectorContext requires special context');
+      }
+    }
+
     selector = selector || ((v: Value) => v as unknown as Selected);
 
     const getSnapshotWithSelector = useMemo(() => {
