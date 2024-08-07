@@ -31,7 +31,7 @@ function createUseContextHook() {
     selector?: (value: Value) => Selected,
     isEqual?: EqualityFn<Selected>
   ) => {
-    const { getSnapshot, subscribe } = React.useContext(
+    let { getSnapshot, subscribe } = React.useContext(
       context as unknown as Context<ZContextValue<Value>>
     );
 
@@ -39,6 +39,15 @@ function createUseContextHook() {
       if (!getSnapshot || !subscribe) {
         throw new Error('useSelectorContext requires special context');
       }
+    }
+
+    if (typeof subscribe !== 'function') {
+      if (typeof process === 'object' && process.env.NODE_ENV !== 'production') {
+        console.warn(
+          'Call useContext before the context has been initialized. This is not recommended.'
+        );
+      }
+      subscribe = () => () => {};
     }
 
     selector = selector || ((v: Value) => v as unknown as Selected);
